@@ -124,8 +124,9 @@
                 android:textColor="@color/textColor"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@id/textViewMain2"
-                app:layout_constraintTop_toBottomOf="id/imageViewMain3"
-                app:layout_editor_absoluteY="40dp" />
+                app:layout_constraintTop_toBottomOf="@id/imageViewMain3"
+                app:layout_editor_absoluteY="40dp"
+                 />
 
             <TextView
                 android:id="@+id/textViewMain5"
@@ -194,6 +195,7 @@
         app:layout_constraintTop_toBottomOf="@id/cardView1" >
 
        <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/addMenu"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:background="@drawable/greencard">
@@ -239,6 +241,7 @@
         app:layout_constraintTop_toTopOf="@id/cardView2" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addItemMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/greencard">
@@ -257,7 +260,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add Item Menu"
+                android:text="All Item Menu"
                 android:layout_marginTop="28dp"
                 android:textColor="@color/textColor"
                 android:fontFamily="@font/yeonsungregular"
@@ -283,6 +286,7 @@
         app:layout_constraintTop_toBottomOf="@id/cardView2" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/greencard">
@@ -326,6 +330,7 @@
         app:layout_constraintStart_toEndOf="@+id/cardView4"
         app:layout_constraintTop_toTopOf="@id/cardView4" >
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/createNewUser"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/greencard">
@@ -370,6 +375,7 @@
         app:layout_constraintTop_toBottomOf="@id/cardView4" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/orderDipatch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/greencard">
@@ -414,6 +420,7 @@
         app:layout_constraintTop_toTopOf="@id/cardView6" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/logOut"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/greencard">
