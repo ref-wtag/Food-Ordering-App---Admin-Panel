@@ -7,47 +7,52 @@
     android:background="@color/white"
     tools:context=".AddItemActivity">
 
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/arrow_left"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/txtViewAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Item"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:fontFamily="@font/yeonsungregular"
+            app:layout_constraintTop_toTopOf="@id/backButton"
+            app:layout_constraintStart_toEndOf="@id/backButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
     <ScrollView
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:scrollbars="none"
         android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toBottomOf="@id/txtViewAddItem"
+         >
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ImageButton
-                android:id="@+id/backButton"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/arrow_left"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="8dp"
-                android:scaleType="centerCrop"
-                android:background="@android:color/transparent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-            <TextView
-                android:id="@+id/txtViewAddItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add Item"
-                android:textColor="@color/black"
-                android:textSize="40sp"
-                android:fontFamily="@font/yeonsungregular"
-                app:layout_constraintTop_toTopOf="@id/backButton"
-                app:layout_constraintStart_toEndOf="@id/backButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                />
+            android:layout_height="match_parent"
+            >
             <EditText
                 android:id="@+id/enterFoodName"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:hint="Enter Food Name"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/edittextshape"
@@ -59,12 +64,12 @@
                 android:fontFamily="@font/yeonsungregular"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtViewAddItem"
+                app:layout_constraintTop_toTopOf="parent"
                 />
 
             <EditText
                 android:id="@+id/enterFoodPrice"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
@@ -83,7 +88,7 @@
 
             <TextView
                 android:id="@+id/addImage"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:text="Select Image"
                 android:background="@drawable/edittextshape"
@@ -92,6 +97,8 @@
                 android:paddingLeft="15dp"
                 android:fontFamily="@font/yeonsungregular"
                 android:paddingRight="15dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginTop="24dp"
                 android:drawableRight="@drawable/pluse_round"
                 app:layout_constraintEnd_toEndOf="@id/enterFoodPrice"
@@ -112,6 +119,7 @@
                 android:id="@+id/selectedImage"
                 android:layout_width="175dp"
                 android:layout_height="110dp"
+                android:padding="10dp"
                 android:src="@drawable/addimage"
                 android:scaleType="fitCenter"/>
 
@@ -141,12 +149,14 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/yeonsungregular"
                 android:layout_marginTop="4dp"
+                android:maxLines="3"
+                android:inputType="textMultiLine"
                 android:background="@color/white"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/description1"
                 app:layout_constraintTop_toBottomOf="@id/description1"
                 app:layout_constraintEnd_toEndOf="@id/cardViewImage"
-                android:text="Lorem ispum hello there this is a mockdescription" />
+                android:text="Lorem ispum hello there this is a mockdescription testing tesying resrijkshfksfkhfkhdsklhkfkj fjug weriugr reiugrekjkbfkfbjkfhh" />
 
             <TextView
                 android:id="@+id/description2"
@@ -172,6 +182,8 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/yeonsungregular"
                 android:layout_marginTop="4dp"
+                android:maxLines="3"
+                android:inputType="textMultiLine"
                 android:background="@color/white"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/description2"
@@ -183,7 +195,7 @@
                 android:id="@+id/addItemBtn"
                 android:layout_width="157dp"
                 android:layout_height="57dp"
-                android:background="@drawable/greenbuttonshape"
+                android:background="#7AD17D"
                 android:fontFamily="@font/yeonsungregular"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -196,8 +208,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/editTextdescription2"
                 />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
